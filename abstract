@@ -1,0 +1,24 @@
+IAM : ユーザーを管理するためのリソース
+
+グループ : 所属するユーザーに対して、グループに設定した権限を与えることができる
+
+許可ポリシー : グループに対して与える権限 (S3 への古アクセス、lambda の実行権限、など。各リソースに対して閲覧、実行など、権限を細かく設定できる)
+
+
+
+cdk
+プロジェクトの作成
+- prerequisite
+
+- 空フォルダ内で以下を実行 (言語は Typescript, Javascript, Python, Java, Go, C# からお好きなものを)
+cdk init app --language python
+
+
+
+
+参考情報
+- cdk 概要
+https://aws.amazon.com/jp/builders-flash/202309/awsgeek-aws-cdk/?sc_icampaign=builders-flash_awsgeek-aws-cdk&sc_ichannel=ha&sc_icontent=iac&sc_iplace=2up&trk=ha_builders-flash_awsgeek-aws-cdk_iac_2up&awsf.filter-name=*all
+
+- cdk developer guide (python)
+https://docs.aws.amazon.com/ja_jp/cdk/v2/guide/work-with-cdk-python.html
