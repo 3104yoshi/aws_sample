@@ -9,6 +9,9 @@ IAM : ユーザーを管理するためのリソース
 cdk
 プロジェクトの作成
 - prerequisite
+aws-cdk をインストールする必要あり
+https://docs.aws.amazon.com/ja_jp/cdk/v2/guide/work-with.html#work-with-prerequisites
+
 
 - 空フォルダ内で以下を実行 (言語は Typescript, Javascript, Python, Java, Go, C# からお好きなものを)
 cdk init app --language python
