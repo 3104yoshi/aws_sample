@@ -12,12 +12,22 @@ cdk
 1. AWSアカウントと対応するアクセスキーを設定する
 2. aws-cdk をインストールする必要あり
 https://docs.aws.amazon.com/ja_jp/cdk/v2/guide/work-with.html#work-with-prerequisites
-
-
 - 空フォルダ内で以下を実行 (言語は Typescript, Javascript, Python, Java, Go, C# からお好きなものを)
 cdk init app --language python
 
+デプロイ
+1. 初期設定
+初めてデプロイする前に一度だけ以下を実行する
+cdk bootstrap aws://ユーザーID/リージョン
+※注意点
+当然、bootstrap を実行するユーザーには cloudformation を更新する権限が必要
+権限がないと上記コマンドの実行中にエラーが発生する
+ Error: The stack named CDKToolkit failed creation, it may need to be manually deleted from the AWS console:
+そのため、bootstrap の実行中に生成された下記リソースを削除する必要がある
+bootstrap の実行によって生成されるリソースとして、スタックの他、S3バケットが生成される(S3 はデプロイ時に一時ファイルを置くために使用されるらしい)
 
+
+2. デプロイ
 
 
 参考情報
