@@ -15,6 +15,29 @@ https://docs.aws.amazon.com/ja_jp/cdk/v2/guide/work-with.html#work-with-prerequi
 - 空フォルダ内で以下を実行 (言語は Typescript, Javascript, Python, Java, Go, C# からお好きなものを)
 cdk init app --language python
 
+lambda の定義
+1.Stack を継承したクラス (プロジェクト作成時に以下が含まれるクラス) で lambda を定義する
+```
+    def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
+        super().__init__(scope, construct_id, **kwargs)
+```
+
+定義方法
+```
+   def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
+       super().__init__(scope, construct_id, **kwargs)
+       my_lambda = _lambda.Function(
+           self, 'HelloHandler',
+           runtime=_lambda.Runtime.PYTHON_3_11,
+           code=_lambda.Code.from_asset('resources/lambda'),
+           handler='sample.handler'
+       )
+```
+
+code において、 lambda を定義したファイルを含むディレクトリを定義している
+handler は (モジュール名).(メソッド名) を定義する
+
+
 デプロイ
 1. 初期設定
 初めてデプロイする前に一度だけ以下を実行する
@@ -26,9 +49,8 @@ cdk bootstrap aws://ユーザーID/リージョン
 そのため、bootstrap の実行中に生成された下記リソースを削除する必要がある
 bootstrap の実行によって生成されるリソースとして、スタックの他、S3バケットが生成される(S3 はデプロイ時に一時ファイルを置くために使用されるらしい)
 
-
 2. デプロイ
-
+cdk deploy を実行する
 
 参考情報
 - cdk 概要
