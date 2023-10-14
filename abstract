@@ -9,7 +9,8 @@ IAM : ユーザーを管理するためのリソース
 cdk
 プロジェクトの作成
 - prerequisite
-aws-cdk をインストールする必要あり
+1. AWSアカウントと対応するアクセスキーを設定する
+2. aws-cdk をインストールする必要あり
 https://docs.aws.amazon.com/ja_jp/cdk/v2/guide/work-with.html#work-with-prerequisites
 
 
