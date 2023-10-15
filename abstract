@@ -58,3 +58,11 @@ https://aws.amazon.com/jp/builders-flash/202309/awsgeek-aws-cdk/?sc_icampaign=bu
 
 - cdk developer guide (python)
 https://docs.aws.amazon.com/ja_jp/cdk/v2/guide/work-with-cdk-python.html
+
+
+CloudFormation とは？
+- aws のリソースをテンプレートで管理できるサービス
+- テンプレートは YAML, JSON 等の設定ファイルで記述する
+
+
+
