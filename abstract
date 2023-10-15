@@ -77,3 +77,17 @@ CloudFormation, テンプレート、スタックの関係
 CDK と CloudFormation の関係
 - CDK は CloudFormation のテンプレートを生成するテンプレートエンジン 
 
+ARNとは？
+- Amazon Resource Name の略であり、AWS リソースを一意に識別する
+- ARN の一般的な形式は以下の通り。(一部のリソースの ARN では、リージョン、アカウントIDが省略されている)
+```
+arn:partition:service:region:account-id:resource-id
+arn:partition:service:region:account-id:resource-type/resource-id
+arn:partition:service:region:account-id:resource-type:resource-id
+
+IAM ユーザー
+arn:aws:iam::123456789012:user/johndoe
+```
+
+
+
