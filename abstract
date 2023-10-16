@@ -26,6 +26,11 @@ lambda の定義
 ```
    def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
        super().__init__(scope, construct_id, **kwargs)
+
+       # s3 の定義
+    　 bucket = s3.Bucket(self, 'MyFirstBucket')
+
+       # lambda の定義
        my_lambda = _lambda.Function(
            self, 'HelloHandler',
            runtime=_lambda.Runtime.PYTHON_3_11,
