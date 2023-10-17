@@ -37,6 +37,15 @@ lambda の定義
            code=_lambda.Code.from_asset('resources/lambda'),
            handler='sample.handler'
        )
+
+       my_lambda2 = .....
+
+       # stepfunction の定義
+       state_machine3 = sfn.StateMachine(self, "MyStateMachine3",
+                                 definition=tasks.LambdaInvoke(self, "MyLambdaTask3",
+                                     lambda_function=my_lambda2).next(tasks.LambdaInvoke(self, "MyLambdaTask4",
+                                     lambda_function=my_lambda)).next(
+                                         sfn.Succeed(self, "3!")))
 ```
 
 code において、 lambda を定義したファイルを含むディレクトリを定義している
