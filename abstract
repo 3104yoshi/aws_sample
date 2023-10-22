@@ -105,3 +105,13 @@ VPC とは？
 
 AWS RDS でたてた postgres から S3 に直接export できる
 
+config と credentials の違い
+conifg
+- アカウントの情報を管理し、cli から使用するときは --profile で指定する
+   - リージョン、ロール など
+
+credentials
+- cli から api を呼び出すときの認証情報
+   - シークレットキーとアクセスキー
+
+
